@@ -10,7 +10,8 @@ nav .menu-mobile li span,
 #contactform,
 .location-infoC .letter {display:none;}
 
-.page-template-promo-php #contactform { display: block; }
+.page-template-promo-php #contactform,
+footer ul.menu li.hide-lg { display: block; }
 
 .anythingSlider,
 .anythingWindow,
@@ -80,7 +81,7 @@ nav .menu-mobile ul :hover a { color:#bdfa74; }
 
 nav .menu-mobile li[class*="current"] a { color:#bdfa74; }
 nav .menu-mobile li[class*="current"].neverActive a { color:#fff; }
-	nav .menu-mobile li[class*="current"].neverActive a:hover { color:#bdfa74; }
+nav .menu-mobile li[class*="current"].neverActive a:hover { color:#bdfa74; }
 
 .home nav#access {position:relative; left:-50%; padding-top:68px;}
 .home nav .menu-mobile {position:relative; left:50%; padding:0;}
@@ -110,16 +111,36 @@ a.button.hide-sm, div.hide-sm { display: none;}
 
 a.cright { clear: right; }
 
-footer {height:65px; background:url(images/transparent.png); color:#FFFFFF;}
+footer {height:65px; background:url(images/transparent.png); color:#FFFFFF; bottom:0%;}
 footer .fright {float:none; text-align:center;}
 
 footer p { float: none; padding: none; text-align: center;}
 
 footer .fright ul {float:none;}
-footer .fright ul li {display:inline-block; float:none; padding:0 .6em;}
+footer .fright ul li {display:inline-block; float:left; padding:0 0 0 8%;}
 footer .fright ul li.hide-small {display:none;}
+footer .fright ul li.hide-lg {float: right; padding:0;}
 footer .fright ul li a {color:#FFFFFF; font-weight:bold;}
 footer .fright ul li a:hover {color:#f78f1e;}
+footer .fright ul #change-box {display:none; 
+/*	-webkit-transition:display 1s;
+	-webkit-transition-timing-function:linear;
+	-webkit-transition-delay:2s;
+    transition:display 1s;
+    transition-timing-function:linear;
+    transition-delay:2s;						*/
+    background:#71d000; 
+    padding:2px 8px 2px 8px; 
+    margin:2px 0 0; 
+    position:absolute; 
+    bottom:100%; 
+    min-width:68px; 
+    z-index:10;
+}
+footer .fright ul #change-box li {float:right; width:100%; padding:0; text-align: left;}
+footer .fright ul #change-box li a {display:inline-block; color:#FFFFFF; font-size:12px; line-height:22px;}
+footer .fright ul #change-region:hover + #change-box, footer .fright ul #change-box:hover {display:block;} /* won't work on browser full=0 small because hover is different */
+/*footer .fright ul #change-region:not(:hover) + #change-box {display:none;} //nonono */
 footer .fright p {padding-bottom:0;}
 
 
@@ -132,7 +153,7 @@ footer .fright p {padding-bottom:0;}
 	margin: 0 auto -45px;
 }
 
-.home #wrapper { width: 100%; background:url(images/store83fadeSM2.jpg) no-repeat bottom center; background-size: cover;}
+.home #wrapper { width: 100%; background:url(images/store83fadeSM2.jpg) no-repeat fixed bottom center; background-size: cover;}
 
 #wrapperB {
 	width:300px;	
