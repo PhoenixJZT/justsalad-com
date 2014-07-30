@@ -175,8 +175,13 @@ jQuery("#field2").val("");
 				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentyten' ); ?>"><?php _e( 'Skip to content', 'twentyten' ); ?></a></div>
 				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
 				<?php wp_nav_menu( array( 'container' => 'false', 'menu_class' => 'menu-header', 'theme_location' => 'main-menu', 'walker' => new agcustom_walker() ) ); ?>
-                
-   				<?php wp_nav_menu( array( 'container' => 'false', 'menu_class' => 'menu-mobile', 'theme_location' => 'mobile-menu' ) ); ?>
+                <?php 
+                if($blog_id!=4) {
+   					wp_nav_menu( array( 'container' => 'false', 'menu_class' => 'menu-mobile', 'theme_location' => 'mobile-menu' ) );
+                } else {
+   					wp_nav_menu( array( 'container' => 'false', 'menu_class' => 'menu-mobile', 'theme_location' => 'mobile-menu', 'items_wrap' => '<ul id="%1$s" class="%2$s"><li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dubai.justsalad.com/locations/">Locations</a></li>%3$s</ul>' ) ); 
+				}
+				?>
 			</nav><!-- #access -->
 		</section><!-- #masthead -->
 		<div class="clear"></div>
