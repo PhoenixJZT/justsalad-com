@@ -17,7 +17,7 @@ footer ul.menu li.hide-lg { display: block; }
 .anythingWindow,
 .anythingControls {display:none !important;}
 
-#content {
+#content, .jsp-page #content, #jsp-content {
 	width:100%;
 	margin:0;
 }
@@ -81,7 +81,7 @@ nav .menu-mobile ul :hover a { color:#bdfa74; }
 
 nav .menu-mobile li[class*="current"] a { color:#bdfa74; }
 nav .menu-mobile li[class*="current"].neverActive a { color:#fff; }
-nav .menu-mobile li[class*="current"].neverActive a:hover { color:#bdfa74; }
+	nav .menu-mobile li[class*="current"].neverActive a:hover { color:#bdfa74; }
 
 .home nav#access {position:relative; left:-50%; padding-top:68px;}
 .home nav .menu-mobile {position:relative; left:50%; padding:0;}
@@ -108,6 +108,22 @@ a.button { float:right; padding:0 7px; margin:0 0 5px 5px; font-size:15px; line-
 a.button.hide-lg, div.hide-lg {display:block;}
 img.hide-lg { display: inline-block; }
 a.button.hide-sm, div.hide-sm { display: none;}
+
+.page-menu {padding: 0; margin-left: 0.5%; margin-top: 400px;} /*img.alignleft always 430/510*/
+.page-menu li {width: 32%; margin: 0;}
+.page-menu li a, .page-menu li a:hover {
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-size: contain; 
+	-moz-background-size: contain; 
+	-webkit-background-size: contain;
+}
+.page-menu li a#local-button:hover,.page-menu li a#local-button { background-image: url(images/button-local.png); background-position: 0 0;}
+.page-menu li.current-menu-item a#local-button { background-image: url(images/button-local_cur.png); background-position: 0 0; }
+.page-menu li a#org-button:hover,.page-menu li a#org-button { background-image: url(images/button-organic.png); background-position: 0 0; }
+.page-menu li.current-menu-item a#org-button { background-image: url(images/button-organic_cur.png); background-position: 0 0; }
+.page-menu li a#gmo-button:hover,.page-menu li a#gmo-button { background-image: url(images/button-non-gmo.png); background-position: 0 0; }
+.page-menu li.current-menu-item a#gmo-button { background-image: url(images/button-non-gmo_cur.png); background-position: 0 0; }
 
 a.cright { clear: right; }
 
@@ -172,6 +188,35 @@ nav ul.menu-mobile:after {content: ".";
 
 #map { display: none; }
 
-#content img.featured { width: 100%; !IMPORTANT}
+#content img.featured, #content img.featured-jsp, #content img.alignnone { width: 100%; !IMPORTANT}
+#content img.featured-jsp {margin: 0; !IMPORTANT}
+/*put left img in feature position with buttons underneath*/
+#jsp-content img.alignleft {
+	position: absolute;
+	clear: both;
+	width: 100%;
+	margin-left: -100%;
+}
+#jsp-content ul.reasons { 
+	width: 90%; 
+	padding-right: 0; 
+	margin-right: 0;
+}
+#jsp-content ul.list-title { 
+	width: 100%;
+	padding-right: 0;
+	padding-left: 0; 
+	margin-right: 0;
+}
+#jsp-content ul.ings-only {
+	margin-left: 0; 
+	width: 100%;
+	-webkit-column-width: initial; 
+	-moz-column-width: 	  initial; 
+	column-width:         initial;
+}
+#jsp-content ol.ings 	{margin-left: 0; 	 width: 50%; overflow-x: scroll;}
+#jsp-content ol.farms 	{margin-right: -10%; width: 50%; overflow-x: scroll;}
+#jsp-content ol li		{width: 200px;}
 
 #zipform input#zipsubmit { -webkit-appearance: none; }
