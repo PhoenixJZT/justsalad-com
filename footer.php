@@ -1,5 +1,4 @@
 <?php
-/*~~~	TEST ME!	~~~*/
 /**
  * The template for displaying the footer.
  *
@@ -26,7 +25,7 @@
 			else {$cursite="NY/NJ"; }
 		?>
         <?
-			$nei = "<ul id=\"%1\$s\" class=\"%2\$s\">%3\$s<li class=\"hide-lg\">$cursite<a id=\"change-region\"><strong>(change)</strong></a><ul id=\"change-box\" class=\"unbulleted\">"; //<a id=\"change-region\"><strong>(change)</strong></a><ul id=\"change-box\">
+			$nei = "<ul id=\"%1\$s\" class=\"%2\$s\">%3\$s<li class=\"hide-lg\">$cursite<a id=\"change-region\"><strong>(change)</strong></a><ul id=\"change-box\" class=\"unbulleted\">"; 
 			if($blog_id!=1) {$nei .= "<li><a href=\"http://justsalad.com\">NY/NJ</a></li>";}
         	if($blog_id!=2) {$nei .= "<li><a href=\"http://hk.justsalad.com\">Hong Kong</a></li>"; }
 			if($blog_id!=4) {$nei .= "<li><a href=\"http://dubai.justsalad.com\">UAE</a></li>"; }

@@ -37,7 +37,6 @@ get_header();?>
 	            echo get_the_post_thumbnail( $post->ID, array(819,200), array('class'=>'featured-jsp hide-small') );
 	            if ($pageame == 'food') {echo '</a>';} ?>
             	             
-				<!-- Consider #6 http://premium.wpmudev.org/blog/free-wordpress-tab-plugins/  - nvm -->
 				<ul id="promise-info" class="page-menu" > 
 					<li id="local" class="menu-item <?php if ($pagename == 'local-list') echo ' current-menu-item';?>">
 						<a id="local-button" href="/food/local-list/">local list</a>
