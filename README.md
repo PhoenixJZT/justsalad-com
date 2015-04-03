@@ -29,7 +29,7 @@ Just Salad Promise (11/14)
     - Since page content (an image and plain text in predetermined HTML tags) is edited in the
     visual page editor by employees with little to no web design experience, every aspect of
     the formatting and layout of these pages was implemented in CSS and with as little use of 
-    attributes beyond basic HTML tags as possible.
+    attributes beyond basic HTML tags as possible:
     - Each page begins with a left-aligned image, a header, and a descriptive paragraph.
     - Organic and Non-GMO pages are identical in format - dividing the page after the description
     with a brush stroke image, after which ingredients are listed in two columns under a single 
